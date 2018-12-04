@@ -19,4 +19,9 @@
   width: 1240px;
   margin: 0 auto;
 }
+.content{
+  padding: 40px 0;
+  width: 1240px;
+  margin: 0 auto;
+}
 </style>
