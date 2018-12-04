@@ -1,30 +1,31 @@
 <template>
   <div class="wrapper">
-    <v-banner :img="bannerImg" :text="bannerText" />
+    <v-banner :img="bannerImg" :text="bannerText"/>
   </div>
 </template>
 
 <script>
-import banner from '../banner/AboutBanner';
-import bannerImg from '../../assets/image/About.jpg'
+import banner from "../banner/AboutBanner";
+import bannerImg from "../../assets/image/About.jpg";
 export default {
-  components:{
-    'v-banner':banner
+  components: {
+    "v-banner": banner
   },
-  props:{},
-  data(){
+  props: {},
+  data() {
     return {
-      "bannerImg":bannerImg,
-      "bannerText":'企业文化'
-    }
+      bannerImg: bannerImg,
+      bannerText: "企业文化"
+    };
   },
-  watch:{},
-  computed:{},
-  methods:{},
-  created(){},
-  mounted(){}
-}
+  watch: {},
+  computed: {},
+  methods: {},
+  created() {},
+  mounted() {}
+};
 </script>
 <style lang="scss" scoped>
-.wrapper{}
+.wrapper {
+}
 </style>
