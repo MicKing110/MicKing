@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <v-head :headData="componentData"/>
+    <!-- <div class="oDiv"></div> -->
+      <v-head :headData="componentData"/>
     <component :is="componentId"></component>
     <v-foot/>
   </div>
@@ -42,6 +43,16 @@ export default {
 </script>
 <style lang="scss">
   .home{
+    .oDiv{
+      height: 60px;
+    }
+    .headNav{
+      position: fixed;
+      left: 0;
+      top: 0;
+      background: #fff;
+      width: 100%;
+    }
     .banner{
       width: 100%;
     }

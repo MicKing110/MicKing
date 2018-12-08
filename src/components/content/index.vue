@@ -115,16 +115,7 @@
         <p>Engineering case</p>
       </div>
       <div class=" content">
-        <div class="caseContent">
-           <ul>
-             <li v-for="(item,index) in caseContentData" :key="index">
-               <img :src="item.image" alt="">
-               <div class="caseContentText">
-                 <p>{{item.text}}</p>
-               </div>
-             </li>
-           </ul>
-        </div>
+        <v-content :AllData='indexCase' ></v-content>
       </div>
     </div>
     <!-- <div class="main">
@@ -144,41 +135,19 @@
 <script>
 import banner from "../banner/AboutBanner";
 import bannerImg from "../../assets/image/banner.jpg";
+import content from './content'
+import mack from '../../assets/js/mock.js'
 export default {
   components: {
-    "v-banner": banner
+    "v-banner": banner,
+    'v-content':content
   },
   props: {},
   data() {
     return {
       bannerImg: bannerImg,
       bannerText: "内容",
-      caseContentData:[
-        {
-          'image':bannerImg,
-          'text': "测试一"
-        },
-        {
-          'image':bannerImg,
-          'text': "测试二"
-        },
-        {
-          'image':bannerImg,
-          'text': "测试三"
-        },
-        {
-          'image':bannerImg,
-          'text': "测试四"
-        },
-        {
-          'image':bannerImg,
-          'text': "测试五"
-        },
-        {
-          'image':bannerImg,
-          'text': "测试六"
-        },
-      ]
+      indexCase:mack.indexCase
     };
   },
   watch: {},

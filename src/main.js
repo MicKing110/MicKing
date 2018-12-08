@@ -3,11 +3,15 @@ import App from './App.vue'
 import router from './router'
 import VueAMap from 'vue-amap';
 import './registerServiceWorker'
-// import iView from 'iview'
-// import 'iview/dist/styles/iview.css'
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
 
 import './assets/css/common.css'
 Vue.use(VueAMap);
+Vue.use(iView, {
+  transfer: true,
+  size: 'large'
+});
 Vue.config.productionTip = false
 VueAMap.initAMapApiLoader({
   key: 'your amap key',

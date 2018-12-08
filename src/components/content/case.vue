@@ -1,10 +1,18 @@
 <template>
   <div class="wrapper">
     <v-banner :img="bannerImg" :text="bannerText"/>
-    <div>
-      <ul>
-        <li v-for="(item,index) in caseData" :key="index">{{item}}</li>
-      </ul>
+    <div class="body casewaraper">
+      <Tabs>
+          <TabPane label="石材翻新">
+            <v-content :AllData='Stone'></v-content>
+          </TabPane>
+          <TabPane label="开荒保洁" >
+            <v-content :AllData='Cleaning'></v-content>
+          </TabPane>
+          <TabPane label="外墙清洗" >
+            <v-content :AllData='External'></v-content>
+          </TabPane>
+      </Tabs>
     </div>
   </div>
 </template>
@@ -12,26 +20,38 @@
 <script>
 import banner from "../banner/AboutBanner";
 import bannerImg from "../../assets/image/About.jpg";
+import content from './content'
+import mack from '../../assets/js/mock.js'
 export default {
   components: {
-    "v-banner": banner
+     
+    "v-banner": banner,
+    'v-content':content
+
   },
   props: {},
   data() {
     return {
-      caseData: ["石材翻新", "开荒保洁", "外墙清洗"],
       bannerImg: bannerImg,
-      bannerText: "工程案例"
+      bannerText: "工程案例",
+      Stone:mack.StoneAll,
+      Cleaning:mack.CleaningAll,
+      External:mack.ExternalAll
     };
   },
   watch: {},
   computed: {},
   methods: {},
-  created() {},
+  created() {
+    console.log(mack)
+  },
   mounted() {}
 };
 </script>
 <style lang="scss" scoped>
 .wrapper {
+  .casewaraper{
+    padding: 20px 0;
+  }
 }
 </style>
