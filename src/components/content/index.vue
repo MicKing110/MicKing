@@ -84,7 +84,7 @@
         </div>
       </div>
     </div>
-
+      <!-- 关于我们 -->
     <div class="main">
       <div class="mainCon">
         <h4>关于我们</h4>
@@ -108,18 +108,36 @@
         </div>
       </div>
     </div>
+    <!-- 工程案例 -->
     <div class="main">
       <div class="mainCon">
         <h4>工程案例</h4>
         <p>Engineering case</p>
       </div>
+      <div class=" content">
+        <div class="caseContent">
+           <ul>
+             <li v-for="(item,index) in caseContentData" :key="index">
+               <img :src="item.image" alt="">
+               <div class="caseContentText">
+                 <p>{{item.text}}</p>
+               </div>
+             </li>
+           </ul>
+        </div>
+      </div>
     </div>
-    <div class="main">
+    <!-- <div class="main">
       <div class="mainCon">
         <h4>我们的资质认证</h4>
         <p>一张张证书,是您的保障,更是对我们做事情的态度</p>
       </div>
-    </div>
+      <div class="content">
+        <ul>
+
+        </ul>
+      </div>
+    </div> -->
   </div>
 </template>
 
@@ -134,7 +152,33 @@ export default {
   data() {
     return {
       bannerImg: bannerImg,
-      bannerText: "内容"
+      bannerText: "内容",
+      caseContentData:[
+        {
+          'image':bannerImg,
+          'text': "测试一"
+        },
+        {
+          'image':bannerImg,
+          'text': "测试二"
+        },
+        {
+          'image':bannerImg,
+          'text': "测试三"
+        },
+        {
+          'image':bannerImg,
+          'text': "测试四"
+        },
+        {
+          'image':bannerImg,
+          'text': "测试五"
+        },
+        {
+          'image':bannerImg,
+          'text': "测试六"
+        },
+      ]
     };
   },
   watch: {},
@@ -147,6 +191,7 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
   .main {
+    min-width: 1240px;
     .mainCon {
       padding: 15px 0;
       text-align: center;
@@ -239,6 +284,41 @@ export default {
           a {
             color: #fff;
           }
+        }
+      }
+    }
+    // 案例
+    .caseContent{
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -40px;
+        li{
+          position: relative;
+          width: 386px;
+          height: 240px;
+          margin: 0 0 40px 40px;
+          cursor: pointer;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+          .caseContentText{
+            display: none;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0,0,0,0.5);
+            p{
+              color: #fff;
+              text-align: center;
+              line-height: 30px;
+            }
+          } 
+        }
+        li:hover .caseContentText{
+          display: block;
         }
       }
     }

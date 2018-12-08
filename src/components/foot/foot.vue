@@ -30,6 +30,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .wrapper {
+   min-width: 1240px;
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
   padding: 30px 0;

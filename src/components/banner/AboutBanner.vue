@@ -23,6 +23,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .wrapper {
+   min-width: 1240px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   p {
