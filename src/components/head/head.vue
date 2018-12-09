@@ -47,7 +47,6 @@ export default {
   },
   created() {},
   mounted() {
-    console.log(this.headData);
   }
 }
 </script>

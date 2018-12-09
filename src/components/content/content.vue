@@ -31,7 +31,6 @@ export default {
   methods:{},
   created(){},
   mounted(){
-    console.log(this.AllData)
   }
 }
 </script>

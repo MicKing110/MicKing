@@ -43,7 +43,6 @@ export default {
   computed: {},
   methods: {},
   created() {
-    console.log(mack)
   },
   mounted() {}
 };

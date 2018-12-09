@@ -24,7 +24,6 @@ import banner from "../banner/AboutBanner";
 import bannerImg from "../../assets/image/About.jpg";
 
 import mack from '../../assets/js/mock.js'
-console.log(mack)
 export default {
   components: {
     "v-banner": banner,
@@ -42,7 +41,6 @@ export default {
   computed: {},
   methods: {
     pageData(index){
-      console.log(index)
       if(index == 1)
       {
           this.imageAll=mack.imageAll
@@ -52,7 +50,6 @@ export default {
     }
   },
   created() {
-    // console.log(this.imageAll.length)
     this.pageNum=20;
   },
   mounted() {}

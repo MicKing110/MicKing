@@ -16,7 +16,6 @@ export default {
   computed: {},
   methods: {},
   created() {
-    console.log(this.img);
   },
   mounted() {}
 };

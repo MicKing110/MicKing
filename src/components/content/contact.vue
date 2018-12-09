@@ -49,7 +49,6 @@ export default {
           visible: true,
           events: {
             close() {
-              console.log('close infowindow1');
             }
           }
         }
