@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.b1d5d45bf9496ed6a9a917df63ec05a1.js"
+  "/precache-manifest.d8ebebaf900fd66f62e27fbcc8773db9.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "my_zhongjieguoji"});
